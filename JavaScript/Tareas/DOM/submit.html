@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang=es>
+    <head>
+        <!-- La codificación. Considéralo una buena práctica -->
+        <meta charset=utf-8>
+
+        <!-- Información adicional para buscadores y navegadores -->
+        <meta name="author" content="Nombre del autor">
+        <meta name="description" content="Ejemplo de onload">
+
+        <!-- Título de la página -->
+        <title>Ejemplo de onload</title>
+        
+        <!-- Carga la hoja de estilos -->
+        <link rel="stylesheet" href="onsubmit.css">
+
+        <!-- Carga el script en diferido -->
+        <script src="onsubmit.js" defer></script>        
+    </head>
+
+    <body>
+        <h1>Prueba onsubmit</h1>
+        <p>Valida el DNI. En caso de que sea inválido no permite enviar el form
+
+        <!-- Si identifico el form de este modo, puedo acceder directamente con . -->
+        <form id="frm" name="frm">
+            <input type="text" name="nif">
+            <input type="submit">
+        </form>
+    </body>   
+</html>
