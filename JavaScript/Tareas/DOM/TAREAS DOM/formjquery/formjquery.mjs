@@ -2,12 +2,22 @@ $(document).ready(function() {
     $('#formulario').on('submit', function(e) {
         e.preventDefault();
         
+        // Estas son las variables que hacen falta para el ejercicio
         const nombre = $('#nombre').val();
         const apellido = $('#apellido').val();
         const DNI = $('#DNI').val();
         const email = $('#email').val();
         const password = $('#password').val();
         const password2 = $('#password2').val();
+
+        /**
+         (Es la misma explicacion que en el formDOM.mjs, ya que he reciclado el codigo, simplemente he sustituido las variables por variables del jquery)
+        Explicacion del codigo:
+        A la hora de pulsar el boton de enviar el formulario, antes de enviarlo "pasa" la informacion por varios if-else para validar que todos los
+        campos se han rellenado correctamente. Si un campo no se ha rellenado correctamente se le indica con un windows.alert(Fallo que ha cometido el usuario).
+        Si esta todo bien, se envia todos los datos y se le muestra al usuario que se ha enviado correctamente.
+        Ademas hay un boton de resetear formulario que pone el formulario vacio nuevamente
+        */
 
         if (nombre === '' || email === '' || apellido === '' || DNI === '' || password === '' || password2 === '') {
             alert('Por favor, completa todos los campos');
