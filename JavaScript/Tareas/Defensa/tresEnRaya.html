@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tres En Raya</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous">
+    </script>
+    <script src="tresEnRaya.mjs" defer></script>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #74b9ff, #0984e3);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .titulo h1 {
+        color: white;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      #info-juego {
+        background: white;
+        padding: 15px 30px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      #turno-actual {
+        color: #e74c3c;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      #mensaje {
+        color: #27ae60;
+        font-weight: bold;
+        margin-top: 8px;
+      }
+
+      .tablero {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 15px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+      }
+
+      .celda {
+        width: 100px;
+        height: 100px;
+        background: white;
+        border: none;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .celda:hover {
+        transform: scale(1.05);
+        background: #f8f9fa;
+      }
+
+      .celda:contains("X") {
+        color: #e74c3c;
+      }
+      .celda:contains("O") {
+        color: #3498db;
+      }
+
+      #reseteo {
+        background: #e74c3c;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 1rem;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      #reseteo:hover {
+        background: #c0392b;
+        transform: translateY(-2px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="titulo"><h1>Tres En Raya</h1></div>
+    <div id="info-juego">
+      <h2>Turno: <span id="turno-actual">X</span><span id="contadorJugadasX"> O: 0</span><span id="contadorJugadasO"> X: 0</span></h2>
+      <div id="mensaje"></div>
+
+    </div>
+
+    <div class="tablero" id="tablero">
+      <div class="celda" data-pos="0"></div>
+      <div class="celda" data-pos="1"></div>
+      <div class="celda" data-pos="2"></div>
+      <div class="celda" data-pos="3"></div>
+      <div class="celda" data-pos="4"></div>
+      <div class="celda" data-pos="5"></div>
+      <div class="celda" data-pos="6"></div>
+      <div class="celda" data-pos="7"></div>
+      <div class="celda" data-pos="8"></div>
+    </div>
+
+    <button type="button" id="reseteo">Reiniciar Juego</button>
+  </body>
+</html>

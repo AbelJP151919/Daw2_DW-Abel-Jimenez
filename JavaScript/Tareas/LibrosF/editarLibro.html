@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/editarLibro.js" defer></script>
+</head>
+<body>
+    <h1>Editar Libros</h1>
+    <form id="formEditarLibros">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+        
+        <label for="autor">Autor:</label>
+        <input type="text" id="autor" name="autor" required><br><br>
+
+        <label for="anio">Año de publicacion:</label>
+        <input type="text" id="anio" name="anio" required><br><br>
+        
+        <label for="editorial">Editorial:</label>
+        <input type="text" id="editorial" name="editorial" required><br><br>
+
+        <label for="nEdicion">NºEdicion:</label>
+        <input type="text" id="nEdicion" name="nEdicion" required><br><br>
+
+        <label for="web">Web:</label>
+        <input type="text" id="web" name="web" required><br><br>
+
+        <label for="idEditar">Introduce el ID del libro a editar:</label>
+        <input type="text" id="idEditar" name="idEditar" required><br><br>
+
+        <button type="submit">Editar Libro</button>
+        <button type="button" id="volver">Volver</button>
+    </form>
+    
+</body>
+</html>

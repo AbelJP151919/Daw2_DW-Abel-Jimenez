@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/eliminarLibros.js" defer></script>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-size: 2.2rem;
+}
+
+#formEliminarLibros {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #f44336;
+    outline: none;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    background: #f44336;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background: #da190b;
+    transform: translateY(-2px);
+}
+
+#volver {
+    background: #607D8B;
+    color: white;
+}
+
+#volver:hover {
+    background: #455A64;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    body { padding: 10px; }
+    h1 { font-size: 1.8rem; }
+    #formEliminarLibros { padding: 20px; }
+    button { 
+        width: 100%; 
+        margin: 5px 0; 
+    }
+}
+</style>
+  
+</head>
+<body>
+    <h1>Eliminar Libros</h1>
+    <form id="formEliminarLibros">
+        <label for="titulo">Título del libro a eliminar:</label>
+        <input type="text" id="titulo" name="titulo" required><br><br>
+        
+        <button type="submit">Eliminar Libro</button>
+        <button type="button" id="volver">Volver</button>
+    </form>
+    
+</body>
+</html>
