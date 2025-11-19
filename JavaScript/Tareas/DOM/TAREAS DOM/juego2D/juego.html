@@ -1,35 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego 2D</title>
-
-    <style>
-        .cuadrado{
-            width: 150px;           
-            height: 150px;          
-            background:black;        
-            border: 1px solid #000;  
-        }
-    </style>
-
-    <script src="https://code.jquery.com/jquery-3.6.1.js"
-        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" defer>
+        import { iniciarJuego } from './juego.mjs';
+        $(document).ready(iniciarJuego);
     </script>
-    <script src="jeugo.mjs" defer></script>
 </head>
 <body>
-    <h1>Juego 2D</h1>
-    <h2>Elige la dificultad</h2>
+    <button id="facil">Fácil</button>
+    <button id="medio">Medio</button>
+    <button id="dificil">Difícil</button>
 
-    <ul>
-        <li id="facil">Facil</li><li id="medio">Medio</li><li id="dificil">Dificil</li>
-    </ul>
-
-
-    <div class="cuadrado" id="cuadrado"></div>
-    
 </body>
 </html>
